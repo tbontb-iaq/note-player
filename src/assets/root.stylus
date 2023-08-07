@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Noto Serif'
+	src: url('./fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf')
+}
+
+html,
+html>body,
+html>body>#root,
+html>body>#root>div {
+	width: 100%
+	height: 100%
+	overflow: hidden
+}
+
+html>body {
+	margin: auto
+}

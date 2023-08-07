@@ -1,0 +1,93 @@
+.notation-container {
+	font-family: 'Noto Serif', serif
+	font-size: 25px
+	line-height: 0.8em
+
+	> .divider {
+		height: 1em
+		transform: translateY(0.2em)
+		border-left: 2px black solid
+		margin: 0 5px
+	}
+
+	> .blank {
+		margin: 0 5px
+	}
+
+	> div {
+		display: inline-block
+		l = 0.2em
+
+		>.raise,
+		>.drop {
+			> span {
+				width: l
+				aspect-ratio: 1
+				border-radius: 50%
+				background: black
+				margin-bottom: l
+				margin-left: 0.5ex - 0.5 * l
+				display: block
+			}
+		}
+
+		>.raise > span {
+			&:first-of-type {
+				margin-top: 2 * l
+			}
+		}
+
+		>.drop {
+			&:first-of-type {
+				margin-top: 0
+			}
+
+			&:last-of-type {
+				margin-bottom: 2 * l
+			}
+		}
+
+		>.main {
+			margin-bottom: 2px
+
+			.sustain {
+				>span::after {
+					content: '-'
+					margin: auto 2px
+				}
+			}
+
+			.dot {
+				>span::after {
+					content: '⋅'
+					margin: auto 4px
+				}
+			}
+
+			.num {
+				&.\\#,
+				&.b {
+					&::after {
+						font-size: 0.5em
+						vertical-align: super
+						font-style: italic
+					}
+				}
+
+				&.\\#::after {
+					content: '#'
+				}
+
+				&.b::after {
+					content: 'b'
+				}
+			}
+
+			.line {
+				display: inline-block
+				border-bottom: black 1px solid
+				padding-bottom: 2px
+			}
+		}
+	}
+}
